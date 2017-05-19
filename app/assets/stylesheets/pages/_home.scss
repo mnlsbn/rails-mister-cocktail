@@ -2,3 +2,20 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.padded {
+  background-color: #F1F1F1;
+  padding-top: 20px;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #FDFFF4;
+  border-radius: 10%;
+  width: 600px;
+}
+
+h3 {
+  color: #E4442F;
+}
