@@ -1,7 +1,5 @@
 
 <div class="navbar-wagon">
-
-
   <!-- Logo -->
 
     <h3> Your own cocktails app</h3>
@@ -12,10 +10,18 @@
 
 
       <!-- Button (call-to-action) -->
-      <a href="/cocktails" class="navbar-wagon-item navbar-wagon-button btn">List</a>
+      <a href="/cocktails" class="navbar-wagon-item navbar-wagon-button btn">Menu</a>
       <a href="/cocktails/new" class="navbar-wagon-item navbar-wagon-button btn">Add cocktail</a>
     </div>
 
     <!-- Dropdown appearing on mobile only -->
-
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="/cocktails">Menu</li>
+        <li><a href="/cocktails/new">Add cocktail</a>
+      </ul>
+    </div>
   </div>
+</div>

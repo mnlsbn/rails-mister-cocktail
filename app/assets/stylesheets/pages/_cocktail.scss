@@ -1,5 +1,13 @@
+.product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .product-new {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 40px;
   margin-right: 0px;
 }
@@ -29,7 +37,6 @@
   display: flex;
 }
 .media-body {
-  margin-left: 100px;
   flex: 1 1 auto;
   padding: 20px;
 }
@@ -38,14 +45,13 @@
   height: 60%;
 }
 .media-aside {
-  flex: 0 0 500px;
+  flex: 0 0 400px;
   padding: 30px;
   align-self: stretch;
   background: #F8F7F7;
   border-left: 1px solid #f0efef;
 }
 .media-section {
-  justify-content: center;
   margin: 40px auto;
 }
 .media-section:first-child {
