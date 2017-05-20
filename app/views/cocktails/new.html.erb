@@ -15,9 +15,8 @@
   </div>
 </div>
 <div class="product-new">
-    <div class="top-new"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-            url('<%= cl_image_path 'cocktail'%>')">
-  </div>
+  <%= cl_image_tag("cocktail_xjq8ev.jpg",
+    width: 1200, height: 350, crop: :fill) %>
 </div>
 
 <%# modifier le formulaire et potentiellement le réintégrer dans le show, partie upvote %>
