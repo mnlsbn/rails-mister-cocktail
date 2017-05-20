@@ -1,20 +1,56 @@
-<div class="container">
-  <div class="row">
-    <div class="card text-center">
-      <h2><%= @cocktail.name %></h2>
-      <% @cocktail.doses.each do |dose| %>
-        <p><%= dose.description %> : <%= dose.ingredient.name %> <%=link_to "Delete", dose_path(dose),
-        method: :delete%> </p>
-        <% end %>
 
+<div class="media">
+  <div class="media-body">
+
+    <div class="media-section">
+      <h3><%= @cocktail.name %></h3>
         <% if @cocktail.photo? %>
-        <%= cl_image_tag @cocktail.photo.path, width: 500, height: 350, crop: :fill, class: 'img' %>
+          <%= cl_image_tag @cocktail.photo.path, width: 1000, height: 700, crop: :fill, class: 'img' %>
         <% end %>
     </div>
 
-      <div class="card text-center">
-        <br>
-        <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %>
+    <div class="media-section">
+      <h3>Ingredients</h3>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.description %> : <%= dose.ingredient.name %> <%=link_to "Delete", dose_path(dose),
+        method: :delete%> </p>
+      <% end %>
+      <%= link_to "Add new ingredients", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %>
+    </div>
+  </div>
+
+  <div class="media-aside">
+    <div class="media-section">
+      <h3>Share</h3>
+      <div class="share-links">
+        <a href="#" class="share-link bg-facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#" class="share-link bg-twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#" class="share-link bg-pinterest">
+          <i class="fa fa-pinterest-p"></i>
+        </a>
+        <a href="#" class="share-link bg-whatsapp">
+          <i class="fa fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+    <div class="media-section">
+      <h3>Update</h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 ">
+            <div class="card-new text-center">
+              <%= simple_form_for(@cocktail) do |f| %>
+                <%= f.error_notification %>
+                <%= f.input :name %>
+                <%= f.input :photo, as: :attachinary %>
+                <%= f.button :submit, class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
 </div>

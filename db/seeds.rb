@@ -1,11 +1,26 @@
+Ingredient.delete_all
 
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "rhum")
+Ingredient.create(name: "white rum")
+Ingredient.create(name: "amber rum")
 Ingredient.create(name: "sugar")
 Ingredient.create(name: "grand marnier")
 Ingredient.create(name: "whisky")
 Ingredient.create(name: "cointreau")
+Ingredient.create(name: "tequila")
+Ingredient.create(name: "sparkling water")
+Ingredient.create(name: "sugar cane")
+Ingredient.create(name: "red wine")
+Ingredient.create(name: "orange")
+Ingredient.create(name: "cinnamon")
+Ingredient.create(name: "cachaca")
+Ingredient.create(name: "coca cola")
+Ingredient.create(name: "pineapple juice")
+Ingredient.create(name: "coconut milk")
+Ingredient.create(name: "angostura")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "cranberry")
 
 puts 'Creating ingredients...'

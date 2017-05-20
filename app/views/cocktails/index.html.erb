@@ -1,21 +1,22 @@
-
-<div class="text-center padded">
-  <div class="container-index">
+<div class="product">
+  <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
-          <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+          <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
           <% if cocktail.photo? %>
           <%= link_to (cl_image_tag cocktail.photo.path, width: 150, height: 150, crop: :fill, class: 'img'), cocktail_path(cocktail)%>
           <% end %>
         </div>
-         <br>
-          <%= link_to "Remove", cocktail_path(cocktail), method: :delete %>
+        <ul class="list-inline product-controls hidden-sm hidden-xs">
+          <li><a href=""><i class="fa fa-heart"></i></a></li>
+          <li><a href=""><i class="fa fa-share"></i></a></li>
+          <li><%= link_to "x", cocktail_path(cocktail), method: :delete %></li>
+        </ul>
       </div>
       <% end %>
     </div>
   </div>
 </div>
-
 

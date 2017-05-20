@@ -1,3 +1,16 @@
+
+.product-new {
+  margin-left: 40px;
+  margin-right: 0px;
+}
+
+.top-new {
+  background-size: cover;
+  justify-content: center;
+  width: 1200px;
+  height: 350px;
+}
+
 .img {
   border-radius: 5%;
 }
@@ -11,6 +24,64 @@
   padding-top: 0px;
 }
 
-.container-new {
-  background-size: cover;
+//show cocktail
+.media {
+  display: flex;
+}
+.media-body {
+  margin-left: 100px;
+  flex: 1 1 auto;
+  padding: 20px;
+}
+.media-body img {
+  width: 60%;
+  height: 60%;
+}
+.media-aside {
+  flex: 0 0 500px;
+  padding: 30px;
+  align-self: stretch;
+  background: #F8F7F7;
+  border-left: 1px solid #f0efef;
+}
+.media-section {
+  justify-content: center;
+  margin: 40px auto;
+}
+.media-section:first-child {
+  margin-top: 0;
+}
+.media-section:last-child {
+  margin-bottom: 0;
+}
+
+//show shared links
+.share-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.share-link {
+  flex: 0 0 24%;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
+}
+.bg-whatsapp {
+  background: #4a4a4a;
+}
+.bg-pinterest {
+  background: #aeaeae;
+}
+.bg-twitter {
+  background: #00a3e1;
+}
+.bg-facebook {
+  background: #3b5998;
 }
